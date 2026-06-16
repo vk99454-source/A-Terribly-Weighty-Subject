@@ -11,4 +11,13 @@ public class Converter {
   // pass, exercise your code in a driver function in
   // App.java. This shows that your business logic can
   // run in a console program.
+    public String toPounds(int ounces) {
+        double pounds = ounces / 16.0;
+        return String.format("%.4f lbs", pounds);
+    }
+    public String toPoundsAndOunces(int ounces) {
+        int pounds = ounces / 16;
+        int leftoverOunces = ounces % 16;
+        return pounds + " lbs " + leftoverOunces + " oz";
+    }
 }
